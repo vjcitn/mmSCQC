@@ -82,4 +82,10 @@ task dommSCQC {
       plot(sce[['total_features_by_counts']], sce[['pct_counts_Mt']], xlab='Number of expressed genes', \
           ylab='Mitochondrial proportion (%)');"  
    }  
+   runtime {
+    disks: "local-disk 40 HDD"
+    bootDiskSizeGb: 50
+    docker: "waldronlab/bioconductor_devel"
+    }
+
 }  
