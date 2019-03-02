@@ -84,6 +84,10 @@ task dommSCQC {
       plot(sce[['total_features_by_counts']], sce[['pct_counts_Mt']], xlab='Number of expressed genes', \
           ylab='Mitochondrial proportion (%)'); dev.off();"  
    }  
+   output {
+      File out1 = "plot1.pdf"
+      File out2 = "plot2.pdf"
+      }
    runtime {
     disks: "local-disk 40 HDD"
     bootDiskSizeGb: 50
