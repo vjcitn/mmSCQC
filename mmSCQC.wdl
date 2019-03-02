@@ -67,20 +67,22 @@ task dommSCQC {
       sce <- calculateQCMetrics(sce, feature_controls=list(Mt=mito)); \
       head(colnames(colData(sce)), 10); \
       sce[['PlateOnco']] <- paste0(sce[['Oncogene']], '.', sce[['Plate']]); \
+      pdf('plot1.pdf'); \
       multiplot( \
           plotColData(sce, y='total_counts', x='PlateOnco'), \
           plotColData(sce, y='total_features_by_counts', x='PlateOnco'), \
           plotColData(sce, y='pct_counts_ERCC', x='PlateOnco'), \
           plotColData(sce, y='pct_counts_Mt', x='PlateOnco'), \
-          cols=2); \
+          cols=2); dev.off(); \
        \
+       pdf('plot2.pdf'); \
       par(mfrow=c(1,3)); \
       plot(sce[['total_features_by_counts']], sce[['total_counts']]/1e6, xlab='Number of expressed genes', \
           ylab='Library size (millions)'); \
       plot(sce[['total_features_by_counts']], sce[['pct_counts_ERCC']], xlab='Number of expressed genes', \
           ylab='ERCC proportion (%)'); \
       plot(sce[['total_features_by_counts']], sce[['pct_counts_Mt']], xlab='Number of expressed genes', \
-          ylab='Mitochondrial proportion (%)');"  
+          ylab='Mitochondrial proportion (%)'); dev.off();"  
    }  
    runtime {
     disks: "local-disk 40 HDD"
