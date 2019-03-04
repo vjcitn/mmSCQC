@@ -91,7 +91,7 @@ task dommSCQC {
    runtime {
     disks: "local-disk 40 HDD"
     bootDiskSizeGb: 50
-    docker: "waldronlab/bioconductor_devel"
+    docker: "vjcitn/mmsc1:latest"
     }
 
 }  
