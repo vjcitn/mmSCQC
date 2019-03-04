@@ -1,5 +1,5 @@
 # mmSCQC
-Workflow for QC phase of Aaron Lun's simpleSingleCell Bioconductor workflow, expressed in WDL and CWL.
+Workflow for QC phase (Sections 1-3.1) of Aaron Lun's [simpleSingleCell](https://bioconductor.org/packages/devel/workflows/html/simpleSingleCell.html) Bioconductor workflow, expressed in WDL and CWL.
 
 ## Purpose
 
