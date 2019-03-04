@@ -1,3 +1,3 @@
 fcall: 
   class: File
-  path: /Users/stvjc/dockerhome/mmscqc4cwl.R
+  path: ./mmscqc4cwl.R
