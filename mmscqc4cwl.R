@@ -1,4 +1,4 @@
-
+## Code is from the Bioconductor simpleSingleCell workflow by Aaron Lun
 ## ------------------------------------------------------------------------
 library(BiocFileCache)
 bfc <- BiocFileCache('raw_data', ask = FALSE)
